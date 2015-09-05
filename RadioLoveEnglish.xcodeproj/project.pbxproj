@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		19171F4E1B9ACF7E00C43412 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19171F4D1B9ACF7E00C43412 /* main.m */; };
 		19171F511B9ACF7E00C43412 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19171F501B9ACF7E00C43412 /* AppDelegate.m */; };
-		19171F541B9ACF7E00C43412 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19171F531B9ACF7E00C43412 /* ViewController.m */; };
 		19171F571B9ACF7E00C43412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19171F551B9ACF7E00C43412 /* Main.storyboard */; };
 		19171F591B9ACF7E00C43412 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19171F581B9ACF7E00C43412 /* Images.xcassets */; };
 		19171F5C1B9ACF7E00C43412 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19171F5A1B9ACF7E00C43412 /* LaunchScreen.xib */; };
 		19171F681B9ACF7E00C43412 /* RadioLoveEnglishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19171F671B9ACF7E00C43412 /* RadioLoveEnglishTests.m */; };
+		19171F731B9AD39000C43412 /* audiofile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 19171F721B9AD39000C43412 /* audiofile.mp3 */; };
+		19171F791B9AD44200C43412 /* RLEAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 19171F781B9AD44200C43412 /* RLEAudioPlayer.m */; };
+		19171F7C1B9AD48600C43412 /* RLEMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19171F7B1B9AD48600C43412 /* RLEMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,17 @@
 		19171F4D1B9ACF7E00C43412 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19171F4F1B9ACF7E00C43412 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19171F501B9ACF7E00C43412 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19171F521B9ACF7E00C43412 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		19171F531B9ACF7E00C43412 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		19171F561B9ACF7E00C43412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19171F581B9ACF7E00C43412 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		19171F5B1B9ACF7E00C43412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		19171F611B9ACF7E00C43412 /* RadioLoveEnglishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadioLoveEnglishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19171F661B9ACF7E00C43412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19171F671B9ACF7E00C43412 /* RadioLoveEnglishTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioLoveEnglishTests.m; sourceTree = "<group>"; };
+		19171F721B9AD39000C43412 /* audiofile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audiofile.mp3; sourceTree = "<group>"; };
+		19171F771B9AD44200C43412 /* RLEAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLEAudioPlayer.h; sourceTree = "<group>"; };
+		19171F781B9AD44200C43412 /* RLEAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLEAudioPlayer.m; sourceTree = "<group>"; };
+		19171F7A1B9AD48600C43412 /* RLEMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLEMainViewController.h; sourceTree = "<group>"; };
+		19171F7B1B9AD48600C43412 /* RLEMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLEMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +86,19 @@
 		19171F4A1B9ACF7E00C43412 /* RadioLoveEnglish */ = {
 			isa = PBXGroup;
 			children = (
+				19171F7D1B9ADBEC00C43412 /* ConstantClasses */,
+				19171F761B9AD41A00C43412 /* RadioPlayer */,
+				19171F751B9AD3C800C43412 /* HelperClasses */,
+				19171F741B9AD3B300C43412 /* MainClasses */,
+				19171F711B9AD36500C43412 /* Resources */,
 				19171F4F1B9ACF7E00C43412 /* AppDelegate.h */,
 				19171F501B9ACF7E00C43412 /* AppDelegate.m */,
-				19171F521B9ACF7E00C43412 /* ViewController.h */,
-				19171F531B9ACF7E00C43412 /* ViewController.m */,
 				19171F551B9ACF7E00C43412 /* Main.storyboard */,
 				19171F581B9ACF7E00C43412 /* Images.xcassets */,
 				19171F5A1B9ACF7E00C43412 /* LaunchScreen.xib */,
 				19171F4B1B9ACF7E00C43412 /* Supporting Files */,
+				19171F7A1B9AD48600C43412 /* RLEMainViewController.h */,
+				19171F7B1B9AD48600C43412 /* RLEMainViewController.m */,
 			);
 			path = RadioLoveEnglish;
 			sourceTree = "<group>";
@@ -117,6 +127,44 @@
 				19171F661B9ACF7E00C43412 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19171F711B9AD36500C43412 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19171F721B9AD39000C43412 /* audiofile.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		19171F741B9AD3B300C43412 /* MainClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MainClasses;
+			sourceTree = "<group>";
+		};
+		19171F751B9AD3C800C43412 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = HelperClasses;
+			sourceTree = "<group>";
+		};
+		19171F761B9AD41A00C43412 /* RadioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				19171F771B9AD44200C43412 /* RLEAudioPlayer.h */,
+				19171F781B9AD44200C43412 /* RLEAudioPlayer.m */,
+			);
+			name = RadioPlayer;
+			sourceTree = "<group>";
+		};
+		19171F7D1B9ADBEC00C43412 /* ConstantClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ConstantClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +211,7 @@
 		19171F401B9ACF7E00C43412 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RLE;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = meosoft;
 				TargetAttributes = {
@@ -200,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19171F571B9ACF7E00C43412 /* Main.storyboard in Resources */,
+				19171F731B9AD39000C43412 /* audiofile.mp3 in Resources */,
 				19171F5C1B9ACF7E00C43412 /* LaunchScreen.xib in Resources */,
 				19171F591B9ACF7E00C43412 /* Images.xcassets in Resources */,
 			);
@@ -219,7 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19171F541B9ACF7E00C43412 /* ViewController.m in Sources */,
+				19171F791B9AD44200C43412 /* RLEAudioPlayer.m in Sources */,
+				19171F7C1B9AD48600C43412 /* RLEMainViewController.m in Sources */,
 				19171F511B9ACF7E00C43412 /* AppDelegate.m in Sources */,
 				19171F4E1B9ACF7E00C43412 /* main.m in Sources */,
 			);
